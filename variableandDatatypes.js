@@ -8,7 +8,7 @@ console.log(number);
 let name = "arham";
 console.log(name);
 
-// Declaring the var and let in the local context 
+// Declaring the var and let in the local context
 
 function Declaration(){
     var number2 = 5;
