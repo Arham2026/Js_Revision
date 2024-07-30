@@ -67,4 +67,3 @@ for(key in object3){
 // Object.keys() requires the object as an argument
 console.log(Object.keys(object3));
 console.log(Object.values(object3));
-
