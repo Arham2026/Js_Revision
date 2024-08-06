@@ -23,7 +23,7 @@ const createLi = document.createElement('li');
 createLi.innerHTML = 'Banana-Big';
 
 
-document.querySelector('.subjects').append(createLi);
+document.querySelector('.in-order').append(createLi);
 
 
 // removing the elements from the DOM
@@ -54,10 +54,54 @@ console.log(target.classList);
 const change1 = document.getElementById('content');
 const button  = document.getElementById('btn');
 
+// changes the inner text of the paragraph
 button.addEventListener('click',()=>{
     change1.innerHTML = "Oh I see what happened here !";
 })
 
+// Hover effect using the DOM
 button.addEventListener('mouseover',()=>{
     button.style.borderColor='red';
 })
+// detects the mouse when it goes out of the particular area.
+button.addEventListener('mouseout',()=>{
+    button.style.borderColor = '#708090'
+})
+
+// making a image disappear (jim carrey)
+change.addEventListener('dblclick',()=>{
+    change.style.display = 'none';
+})
+
+// changing the background of the paragraph
+change1.addEventListener('mouseover',()=>{
+    change1.style.backgroundColor = '#708090'
+})
+
+change1.addEventListener('mouseout',()=>{
+    change1.style.backgroundColor = '#ffffff'
+})
+
+// Log out the pressed keyboard in the console.
+const input = document.getElementById('keyword');
+input.addEventListener('keydown',(e)=>{
+    console.log('key Pressed : ',e.key);
+})
+
+// show the text seperately that you have typed in the in box
+const text1 = document.getElementById('value1');
+
+input.addEventListener('keyup',()=>{
+    text1.textContent = 'currentvalue :' + input.value;
+})
+
+// consoling the inner text in the list by using delegation and event bubbling
+element.addEventListener('click',()=>{
+        console.log(element.textContent);      
+})
+
+
+const newElement = document.createElement('li');
+
+newElement.textContent = 'C++';
+element.appendChild(newElement);
